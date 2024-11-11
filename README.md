@@ -1,42 +1,37 @@
+# Story Protocol Royalty Token Trading Platform
+
+A decentralized application built on Story Protocol that enables fractional ownership and trading of NFT royalties through ERC20 tokens.
+
+## Overview
+
+This platform allows creators to:
+
+- Mint NFTs with associated royalty tokens
+- Fractionalize NFT ownership through ERC20 tokens
+- Trade royalty shares on an open market
+- Track and distribute royalty payments to token holders
+
+## Key Features
+
+- NFT Creation & Minting
+- Automatic ERC20 Token Generation for Royalty Shares
+- Token Presale Management
+- Real-time Price Charts
+- Wallet Integration
+- Multi-chain Support
+
+## Technical Stack
+
+- Frontend: Next.js + Chakra UI
+- Web3: Ethers.js + Web3-React
+- Smart Contracts: Story Protocol Contracts
+- Networks: Story Protocol Testnet (Chain ID: 1516)
+
 ## Getting Started
 
-To run it on Eth Mainnet:
+1. Clone the repository
+2. Install dependencies with `npm install`
+3. Create a `.env.local` file with required environment variables
+4. Run development server with `npm run dev`
 
-```bash
-yarn dev
-```
-
-To run it on Goerli:
-
-```bash
-yarn dev-testnet
-```
-
-## Folder structure
-
-    .
-    ├── api
-        ├── apiClient           # Generates axios client and a general request error handler
-        ├── useCreateTakeOrder  # hook for handling taker order
-        ├── useFetchAskOrders   # hook for gettingt the ask orders for a token
-        ├── useFetchERC721Owner # hook for getting the owner for a token given a collection address and a tokenId
-        ├── useFetchMints       # hook for getting the mint events for tokens in a collection to be displayed in the collection page
-        ├── useFetchToken       # hook for getting the detailed information about the token
-    ├── components              # All JSX files
-    │   ├── containers          # Main components used by pages directory
-    │       ├── Collection      # Collection page components
-    │       ├── Token           # Token page components
-    │       ├── Home            # Home page components
-    │   ├── layout              # Components that define the layout of the app such as the navigation bar
-    │   └── ui                  # Reusable components such as buttons and modals
-    ├── connectors              # Contains web3-react InjectedConnector for using Metamask provider
-    ├── constants               # Constant variables such as ChainIDs and style
-    ├── hooks                   # Reusable hooks
-    ├── providers               # Providers that wrap the whole or some parts of the application
-    ├── pages                   # App directories
-    │   ├── Collection          # Collection page
-    │   ├── Token               # Token page
-    │   ├── Home                # Home page
-    ├── public                  # Static public files
-    ├── types                   # Reusable types and interfaces
-    ├── utils                   # Reusable helper functions
+## Environment Variables

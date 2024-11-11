@@ -26,9 +26,9 @@ export type TokenDetail = {
   tokenStandard: string
 }
 
-export type Attribute = {
-  count: number
-  displayType: string
-  traitType: string
-  value: string
+export interface Attribute {
+  traitType: string;
+  value: string;
+  count: number;
+  displayType?: string;
 }

@@ -36,10 +36,15 @@ ChartJS.register(
   Legend
 );
 
+interface PriceDataPoint {
+  date: string;
+  price: number;
+}
+
 export default function DisplayOwnership(): JSX.Element {
   const { active, account } = useWeb3React();
   const [sharesBought, setSharesBought] = useState(0);
-  const [priceHistory, setPriceHistory] = useState([]);
+  const [priceHistory, setPriceHistory] = useState<PriceDataPoint[]>([]);
 
   // Mock data for presale
   const totalShares = 10000;
@@ -77,11 +82,11 @@ export default function DisplayOwnership(): JSX.Element {
   }, []);
 
   const chartData = {
-    labels: priceHistory.map((data) => data.date),
+    labels: priceHistory.map((data: any) => data.date),
     datasets: [
       {
         label: "Share Price (ETH)",
-        data: priceHistory.map((data) => data.price),
+        data: priceHistory.map((data: any) => data.price),
         fill: false,
         borderColor: gradientColors[0],
         tension: 0.1,

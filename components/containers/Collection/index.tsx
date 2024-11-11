@@ -55,13 +55,13 @@ export default function Collection(): JSX.Element {
             : tokens &&
               tokens.map((token, i) => {
                 return (
-                  <TokenBox
-                    key={token.tokenId + i}
-                    token={token}
+                  <span
                     onClick={() =>
                       handleTokenClick(token.collectionAddress, token.tokenId)
                     }
-                  />
+                  >
+                    <TokenBox key={token.tokenId + i} token={token} />
+                  </span>
                 );
               })}
         </Grid>

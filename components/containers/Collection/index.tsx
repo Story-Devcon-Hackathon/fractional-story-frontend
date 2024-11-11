@@ -33,7 +33,7 @@ export default function Collection(): JSX.Element {
   const tokens = tokenPages?.pages?.flatMap((token) => token);
 
   const handleTokenClick = (collectionAddress: string, tokenId: string) => {
-    router.push(`/token/${collectionAddress}/${tokenId}`);
+    router.push(`/${collectionAddress}/${tokenId}`);
   };
 
   return (
